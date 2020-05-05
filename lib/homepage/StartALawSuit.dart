@@ -127,7 +127,7 @@ class _StartALawSuitState extends State<StartALawSuit> {
                     sizedBoxWidth,
                     sizedBoxWidth,
                     sizedBoxWidth,
-                    Text("SUBMIT",style: TextStyle(
+                    Text("PAYMENT",style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Gotham',
                         fontWeight: FontWeight.w700,
