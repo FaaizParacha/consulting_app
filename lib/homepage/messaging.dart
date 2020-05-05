@@ -62,24 +62,26 @@ class _ChatScreenState extends State<ChatScreen>{
             Align(
               alignment: Alignment.bottomCenter,
               child: ResponsiveContainer(
-                heightPercent: 6.5,
-                widthPercent: 82.0,
-                child: TextFormField(
-                  decoration:  InputDecoration(
-                      hintText: 'Type here',
-                      fillColor: Colors.white,
-                      filled: true,
-                      border:  OutlineInputBorder(
-                        borderRadius:  BorderRadius.circular(30.0),
-                      ),
-                      prefixIcon: IconButton(
-                          icon : FaIcon(FontAwesomeIcons.smile),
-                        onPressed: (){
-                        //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MainPage()));
-                        },
-                      )
+                widthPercent: 80.0,
+                heightPercent: 8.0,
+                child: Container(
+                  child: TextFormField(
+                    decoration:  InputDecoration(
+                        hintText: 'Type here',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border:  OutlineInputBorder(
+                          borderRadius:  BorderRadius.circular(30.0),
+                        ),
+                        prefixIcon: IconButton(
+                            icon : FaIcon(FontAwesomeIcons.smile),
+                          onPressed: (){
+                          //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MainPage()));
+                          },
+                        )
+                    ),
+                    keyboardType: TextInputType.text,
                   ),
-                  keyboardType: TextInputType.text,
                 ),
               ),
             ),

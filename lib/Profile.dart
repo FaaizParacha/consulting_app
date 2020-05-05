@@ -11,78 +11,95 @@ class _ProfileState extends State<Profile> {
   final dateTime = DateTime.now();
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Column(
-        children: <Widget>[
-          sizedBoxHeight,
-          repeatableRowProfile(
-              text:   Text("Legal tip",style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1.0,
-                  fontFamily: 'Gotham'
-              ),),
-              decisionalText:  Text("Pending",style: TextStyle(
-                  color: Colors.orange,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Gotham'
-              ),),
-              dateTime: dateTime
+    return Scaffold(
+      appBar:  AppBar(
+        leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,size: 25.0,), onPressed: (){
+          Navigator.pop(context);
+        }),
+        backgroundColor: appColor,
+        centerTitle: true,
+        title: Text("Profile",style: TextStyle(color: Colors.white,
+          fontWeight: FontWeight.w600,
+          fontFamily: 'Gotham',
+          fontSize: 20.0,
+        ),
+        ),
+      ),
+      body : SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: <Widget>[
+              sizedBoxHeight,
+              repeatableRowProfile(
+                  text:   Text("Legal tip",style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1.0,
+                      fontFamily: 'Gotham'
+                  ),),
+                  decisionalText:  Text("Pending",style: TextStyle(
+                      color: Colors.orange,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Gotham'
+                  ),),
+                  dateTime: dateTime
+              ),
+              sizedBoxHeight,
+              Divider(color: Colors.grey,thickness: 1.0,),
+
+              sizedBoxHeight,
+              repeatableRowProfile(
+                  text: Text("Legal opinion",style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1.0,
+                      fontFamily: 'Gotham'
+                  ),),
+                  decisionalText:  Text("In progress",style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Gotham'
+                  ),),
+                  dateTime: dateTime),
+              sizedBoxHeight,
+              Divider(color: Colors.grey,thickness: 1.0,),
+
+              sizedBoxHeight,
+              repeatableRowProfile(
+                  text: Text("Contract",style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1.0,
+                      fontFamily: 'Gotham'
+                  ),),
+                  decisionalText:  Text("Finished",style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Gotham'
+                  ),),
+                  dateTime: dateTime),
+              sizedBoxHeight,
+              Divider(color: Colors.grey,thickness: 1.0,),
+              sizedBoxHeight,
+              repeatableRowProfile(
+                  text:  Text("Lawsuit",style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1.0,
+                      fontFamily: 'Gotham'
+                  ),),
+                  decisionalText:  Text("In progress",style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Gotham'
+                  ),),
+                  dateTime: dateTime),
+              sizedBoxHeight,
+              Divider(color: Colors.grey,thickness: 1.0,),
+            ],
           ),
-          sizedBoxHeight,
-          Divider(color: Colors.grey,thickness: 1.0,),
-
-          sizedBoxHeight,
-          repeatableRowProfile(
-              text: Text("Legal opinion",style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1.0,
-                  fontFamily: 'Gotham'
-              ),),
-              decisionalText:  Text("In progress",style: TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Gotham'
-              ),),
-              dateTime: dateTime),
-          sizedBoxHeight,
-          Divider(color: Colors.grey,thickness: 1.0,),
-
-          sizedBoxHeight,
-          repeatableRowProfile(
-              text: Text("Contract",style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1.0,
-                  fontFamily: 'Gotham'
-              ),),
-              decisionalText:  Text("Finished",style: TextStyle(
-                  color: Colors.red,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Gotham'
-              ),),
-              dateTime: dateTime),
-          sizedBoxHeight,
-          Divider(color: Colors.grey,thickness: 1.0,),
-          sizedBoxHeight,
-          repeatableRowProfile(
-              text:  Text("Lawsuit",style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1.0,
-                  fontFamily: 'Gotham'
-              ),),
-              decisionalText:  Text("In progress",style: TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Gotham'
-              ),),
-              dateTime: dateTime),
-          sizedBoxHeight,
-          Divider(color: Colors.grey,thickness: 1.0,),
-        ],
+        ),
       ),
     );
   }

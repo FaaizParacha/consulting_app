@@ -92,15 +92,17 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: ResponsiveContainer(
-                heightPercent: 8.0,
                 widthPercent: 100.0,
-                child: RaisedButton(
+                heightPercent: 8.0,
+                child: MaterialButton(
                   color:Color(0xFF001E36),
-                  child: Text('PREMIUM PROFILE',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),),
-                  elevation: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top:20.0,bottom: 20.0),
+                    child: Text('PREMIUM PROFILE',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),),
+                  ),
                   shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0),
                   ),
@@ -135,33 +137,23 @@ class homePageContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: AspectRatio(
-         aspectRatio: 5.5,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5.0),
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0.0, 1.0), //(x,y)
-                  blurRadius: 6.0,
-                ),
-              ],
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
+    child: Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      color: Colors.white,
+      elevation: 5.0,
+      child: Padding(padding: EdgeInsets.all(8.0),
+               child:  Row(
+             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
                  avatar,
                   text,
-                  iconButton,
+                  Center(child: iconButton),
                 ],
               ),
-            ),
-          ),
       ),
+    ),
     );
   }
 }

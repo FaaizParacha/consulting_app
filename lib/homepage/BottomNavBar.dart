@@ -88,7 +88,7 @@ class _BottomnavState extends State<Bottomnav> {
     return [
       HomePage(),
       ChatScreen(),
-      TabBarDemo()
+      Profile()
     ];
   }
 

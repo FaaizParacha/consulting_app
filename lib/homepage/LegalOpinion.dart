@@ -104,7 +104,7 @@ class _LegalOpinionState extends State<LegalOpinion> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     documentsUpload(),
                     documentsUpload(),

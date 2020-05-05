@@ -38,7 +38,6 @@ class _StartALawSuitState extends State<StartALawSuit> {
       );
     }
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,size: 25.0,), onPressed: (){
           Navigator.pop(context);
@@ -159,32 +158,22 @@ class StartlawsuitContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
     padding: const EdgeInsets.all(10.0),
-    child: ResponsiveContainer(
-      widthPercent: 100.0,
-      heightPercent: 10.0,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0.0, 1.0), //(x,y)
-              blurRadius: 6.0,
+    child: Card(
+      elevation: 5.0,
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0)
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: <Widget>[
+           avatar,
+            SizedBox(
+              width: 40.0,
             ),
+            text
           ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: <Widget>[
-             avatar,
-              SizedBox(
-                width: 40.0,
-              ),
-              text
-            ],
-          ),
         ),
       ),
     ),
