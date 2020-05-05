@@ -48,7 +48,7 @@ class _LawsuitState extends State<Lawsuit> {
           homePageContainer(
             avatar: CircleAvatar(
               radius: 25.0,
-              backgroundImage: AssetImage("assets/StartALawsuit.png"),
+              backgroundImage: AssetImage("assets/lawsuit.png"),
             ),
             text: Text("Start a lawsuit",style: TextStyle(
                 fontWeight: FontWeight.w700,

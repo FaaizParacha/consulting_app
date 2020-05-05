@@ -13,61 +13,6 @@ import 'package:persistent_bottom_nav_bar/models/persistent-bottom-nav-bar-style
 import 'package:persistent_bottom_nav_bar/models/persistent-nav-bar-scaffold.widget.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.widget.dart';
 
-
-//class Bottomnav extends StatefulWidget {
-//  @override
-//  _BottomnavState createState() => _BottomnavState();
-//}
-//
-//class _BottomnavState extends State<Bottomnav> {
-//  int currentIndex = 0;
-//  final List<Widget> _children = [
-//    HomePage(),
-//    TabBarDemo()
-//  ];
-//
-//  void onTabTapped(int index) {
-//    setState(() {
-//      currentIndex = index;
-//    });
-//  }
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//        body: _children[currentIndex],
-//        bottomNavigationBar: FFNavigationBar (
-//          theme: FFNavigationBarTheme (
-//            barBackgroundColor: Colors.white,
-//            selectedItemBorderColor: Colors.purple.shade50,
-//            selectedItemIconColor: Color(0xFF8E7EF0),
-//            selectedItemLabelColor:  Color(0xFF8E7EF0),
-//            showSelectedItemShadow: false,
-//            unselectedItemIconColor: Colors.black,
-//            unselectedItemLabelColor:   Colors.black,
-//          ),
-//          selectedIndex: currentIndex,
-//          onSelectTab: onTabTapped,
-//          items: [
-//            FFNavigationBarItem (
-//              iconData: CupertinoIcons.home,
-//              label: 'Home',
-//              selectedBackgroundColor : Colors.purple.shade50,
-//            ),
-//            FFNavigationBarItem (
-//              iconData: Icons.mail_outline,
-//              label: 'Chat',
-//              selectedBackgroundColor : Colors.purple.shade50,
-//            ),
-//            FFNavigationBarItem (
-//              iconData: Icons.perm_identity,
-//              label: 'Profile',
-//              selectedBackgroundColor : Colors.purple.shade50,
-//            ),
-//          ],
-//        )
-//    );
-//  }
-//}
 class Bottomnav extends StatefulWidget {
   Bottomnav({Key key}) : super(key: key);
 
